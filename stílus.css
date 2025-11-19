@@ -1,0 +1,136 @@
+body {
+  max-width: 900px;
+  margin: auto;
+  border: 3px solid gray;
+  background-color: rgb(255, 233, 206);
+}
+main {
+  padding: 10px;
+  background-color: white;
+  border: 3px solid gray;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "h h"
+    "n n"
+    "ar as";
+}
+
+header {
+  grid-area: h;
+  border: 3px solid gray;
+  margin-left: 20px;
+  padding: 1px;
+}
+
+nav {
+  grid-area: n;
+  background-color: black;
+  border: 3px solid gray;
+  margin-left: 20px;
+  margin-bottom: -20px;
+  padding: 20px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+}
+
+a:hover{
+    background-color: red;
+    color: white;
+}
+
+article {
+  width: 550px;
+  margin: 20px;
+  border: 3px solid gray;
+  padding: 30px;
+  grid-area: ar;
+  grid-gap: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "egy ketto"
+    "harom negy";
+}
+
+aside {
+  grid-area: as;
+}
+img {
+  border: 2px solid white;
+  margin-left: 30px;
+}
+
+.elso {
+  grid-area: egy;
+  border: 3px solid gray;
+  background-color: rgb(224, 223, 223);
+  padding: 10px;
+  max-width: 200px;
+  margin-left: 10px;
+  margin-top: -20px;
+}
+
+.masodik {
+  grid-area: ketto;
+  border: 3px solid gray;
+  background-color: rgb(224, 223, 223);
+  padding: 10px;
+  max-width: 200px;
+  margin-left: 10px;
+  margin-top: -20px;
+}
+
+.harmadik {
+  grid-area: harom;
+  border: 3px solid gray;
+  background-color: rgb(224, 223, 223);
+  padding: 10px;
+  max-width: 200px;
+  margin-left: 10px;
+  margin-top: -30px;
+}
+
+.negyedik {
+  grid-area: negy;
+  border: 3px solid gray;
+  background-color: rgb(224, 223, 223);
+  padding: 10px;
+  max-width: 200px;
+  margin-left: 10px;
+  margin-top: -30px;
+}
+
+aside {
+  grid-area: as;
+  border: 6px solid gray;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: left;
+}
+
+@media screen and ( max-width:700px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "ar"
+        "as";
+    }
+        article{
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "egy"
+            "ketto"
+            "harom"
+            "negy";
+        }
+        
+}
